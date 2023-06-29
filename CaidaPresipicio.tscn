@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyr2262kcq1jf"]
+
+[ext_resource type="Script" path="res://CaidaPresipicio.gd" id="1_8x268"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_21ne6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bkjxe"]
+size = Vector2(36, 28)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+position = Vector2(153, 290)
+script = ExtResource("1_8x268")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_21ne6")
+
+[node name="Meta" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Meta"]
+position = Vector2(3, 0)
+shape = SubResource("RectangleShape2D_bkjxe")
+
+[connection signal="body_entered" from="Meta" to="." method="_on_meta_body_entered"]

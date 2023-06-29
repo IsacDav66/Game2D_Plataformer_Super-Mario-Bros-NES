@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c5qei8bv66r6m"
+path="res://.godot/imported/smb_jump-small.wav-8011202770745d2aa0b188c83e8036b3.sample"
+
+[deps]
+
+source_file="res://MARIO BROS/Audio efects/smb_jump-small.wav"
+dest_files=["res://.godot/imported/smb_jump-small.wav-8011202770745d2aa0b188c83e8036b3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,79 @@
+[gd_scene load_steps=9 format=3 uid="uid://cwianiu3tn2vd"]
+
+[ext_resource type="Texture2D" uid="uid://b1vg2idjma81a" path="res://MARIO BROS/Sprites/Moneda/Moneda.png" id="1_2uw51"]
+[ext_resource type="AudioStream" uid="uid://dqf7825syged" path="res://MARIO BROS/Audio efects/mario-coin.mp3" id="2_dkat6"]
+
+[sub_resource type="GDScript" id="GDScript_kl5om"]
+script/source = "extends Area2D
+
+
+
+func _on_body_entered(body):
+	if body.name == \"Player\":
+		Game.Gold += 5
+		$AudioStreamPlayer.playing = true
+		var tween = get_tree().create_tween()
+		var tween1 = get_tree().create_tween()
+		tween.tween_property(self, \"position\", position - Vector2(0,35),0.35)
+		tween1.tween_property(self, \"modulate:a\",0,0.2)
+		tween.tween_callback(queue_free)
+		
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2ackf"]
+radius = 6.08276
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnjao"]
+atlas = ExtResource("1_2uw51")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mksru"]
+atlas = ExtResource("1_2uw51")
+region = Rect2(17, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4erk"]
+atlas = ExtResource("1_2uw51")
+region = Rect2(34, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p04cf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dnjao")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mksru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4erk")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="Cherry" type="Area2D"]
+script = SubResource("GDScript_kl5om")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2ackf")
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_p04cf")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.278183
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_p04cf")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.648682
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_dkat6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

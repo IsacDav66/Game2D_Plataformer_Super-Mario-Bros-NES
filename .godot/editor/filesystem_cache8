@@ -1,0 +1,82 @@
+2a60927148abd1d33b818b535e306557
+::res://::1688066097
+BG.gd::GDScript::-1::1686838471::0::1::::<>ParallaxBackground<>::
+bg.tscn::PackedScene::8030376368300069441::1686880092::0::1::::<><>::res://BG.gd<>uid://do2rmqff1nxsj<>uid://c2torwpmuig71
+Bloque.gd::GDScript::-1::1686838471::0::1::::<>StaticBody2D<>::
+Bloque.tscn::PackedScene::3378155395360570861::1686880092::0::1::::<><>::uid://cblioy1nliocn<>res://Bloque.gd<>uid://dhe0mrdctfpt8
+CaidaPresipicio.gd::GDScript::-1::1686839042::0::1::::<>StaticBody2D<>::
+CaidaPresipicio.tscn::PackedScene::6494157282149382079::1686880091::0::1::::<><>::res://CaidaPresipicio.gd
+ColorRect.gd::GDScript::-1::1686838471::0::1::::<>ColorRect<>::
+Frog.gd::GDScript::-1::1686876433::0::1::::<>CharacterBody2D<>::
+Frog.tscn::PackedScene::7570837858290704521::1686880091::0::1::::<><>::res://Frog.gd<>uid://c1wp1tt1lg6o4<>uid://b3ehus2xwsxdt
+GombaV2.gd::GDScript::-1::1686873943::0::1::::<>CharacterBody2D<>::
+gomba_v_2.tscn::PackedScene::3954426976004512693::1686880091::0::1::::<><>::res://GombaV2.gd<>uid://c1wp1tt1lg6o4
+goomba.gd::GDScript::-1::1686847651::0::1::::<>CharacterBody2D<>::
+goomba.tscn::PackedScene::8897018086962702633::1686880091::0::1::::<><>::uid://c1wp1tt1lg6o4<>res://goomba.gd
+icon.svg::CompressedTexture2D::8058093968977246105::1685021888::1685021894::1::::<><>::
+Interrogante.gd::GDScript::-1::1686853911::0::1::::<>StaticBody2D<>::
+Interrogante.tscn::PackedScene::238421580047690559::1686880091::0::1::::<><>::res://Interrogante.gd<>uid://ssy8u354gsmu<>uid://dhe0mrdctfpt8<>uid://dqf7825syged
+juego.gd::GDScript::-1::1686838471::0::1::::<>Node2D<>::
+juego.tscn::PackedScene::5326863850535771265::1688066097::0::1::::<><>::res://juego.gd<>uid://vwogb88jcwl2<>uid://do2rmqff1nxsj<>uid://ce2n1ceqch302<>uid://dnq1eqv5nifn<>uid://d2fl4vtman4h<>uid://csibiu8gsyoid<>uid://boenyxbd5voef<>uid://ckidbggo1yvo7<>uid://df4muf8q45mn6<>uid://cn7icykkaloc1<>uid://cyr2262kcq1jf<>uid://bbedeycd5wtkm
+Main.gd::GDScript::-1::1686838471::0::1::::<>Node2D<>::
+Main.tscn::PackedScene::6781173651704484622::1686880089::0::1::::<><>::res://Main.gd<>uid://dmn8ejd7tullp<>uid://cmgajb0gpic61<>uid://ce2n1ceqch302<>uid://csibiu8gsyoid<>uid://na5xqfm86igc
+Moneda.gd::GDScript::-1::1686851354::0::1::::<>Node2D<>::
+Moneda.tscn::PackedScene::266629515467869301::1686880092::0::1::::<><>::res://Moneda.gd<>uid://b1vg2idjma81a
+moneda_interrogante.gd::GDScript::-1::1686853911::0::1::::<>Node2D<>::
+moneda_interrogante.tscn::PackedScene::8590585410295188098::1686880092::0::1::::<><>::res://moneda_interrogante.gd<>uid://dp86s4pup2qo2
+player.gd::GDScript::-1::1686838471::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::1520242884663551337::1686880092::0::1::::<><>::res://player.gd<>uid://na5xqfm86igc<>uid://do5vs5k0vnb6x<>uid://c0te0aksctnku<>uid://c5qei8bv66r6m<>uid://dpprlkigmfrq4<>uid://1kb53mg6ca18
+README.md::TextFile::-1::1688065728::0::1::::<><>::
+ShaderP.tscn::PackedScene::5751847006803727918::1686880092::0::1::::<><>::
+TransicionAJuego.gd::GDScript::-1::1686838471::0::1::::<>Node2D<>::
+transicion_a_juego.tscn::PackedScene::3450042789098875551::1686880091::0::1::::<><>::res://TransicionAJuego.gd<>uid://dt7h5fc2rq2ow<>uid://ce2n1ceqch302
+win.gd::GDScript::-1::1686879711::0::1::::<>StaticBody2D<>::
+win.tscn::PackedScene::2465057596328587164::1686880089::0::1::::<><>::res://win.gd<>uid://b1vg2idjma81a
+::res://Collectables/::1686880092
+Cherry.tscn::PackedScene::6333534617157171025::1686880092::0::1::::<><>::uid://b1vg2idjma81a<>uid://dqf7825syged
+::res://Global/::1686838471
+Game.gd::GDScript::-1::1686838471::0::1::::<>Node<>::
+Utils.gd::GDScript::-1::1686838471::0::1::::<>Node<>::
+::res://MARIO BROS/::1686835904
+::res://MARIO BROS/Audio efects/::1686875608
+mario-coin.mp3::AudioStreamMP3::243959081716183683::1686835516::1686835904::1::::<><>::
+smb_bump.wav::AudioStreamWAV::7660381719555630779::1686777560::1686777577::1::::<><>::
+smb_jump-small.wav::AudioStreamWAV::6911795610726603702::1686776422::1686776455::1::::<><>::
+smb_stomp.wav::AudioStreamWAV::4360427539606880229::1686875493::1686875608::1::::<><>::
+::res://MARIO BROS/Fuente/::1686791789
+Super Mario Bros. 2.ttf::FontFile::5110170804801302709::1585754458::1686791789::1::::<><>::
+::res://MARIO BROS/Music/::1688066089
+Overworld Theme.mp3::AudioStreamMP3::5491429087651944560::1686775544::1688066102::1::::<><>::
+::res://MARIO BROS/Sprites/::1686802527
+::res://MARIO BROS/Sprites/Bloque/::1686770436
+Bloque.png::CompressedTexture2D::4866250404706701465::1686770434::1686770436::1::::<><>::
+::res://MARIO BROS/Sprites/Enemigos/::1686802606
+::res://MARIO BROS/Sprites/Enemigos/Goomba/::1686876872
+Goomba.png::CompressedTexture2D::6644125826588612949::1686876868::1686876872::1::::<><>::
+::res://MARIO BROS/Sprites/Interrogante/::1686677290
+Interrogante.png::CompressedTexture2D::1302075219206515636::1686677288::1686677290::1::::<><>::
+NES - Super Mario Bros - Item and Brick Blocks.png::CompressedTexture2D::1399608075244235913::1686676948::1686676951::1::::<><>::
+::res://MARIO BROS/Sprites/Mario Bros/::1686671342
+::res://MARIO BROS/Sprites/Mario Bros/Idle/::1686671106
+Idle.png::CompressedTexture2D::914318399025403958::1686671045::1686671106::1::::<><>::
+::res://MARIO BROS/Sprites/Mario Bros/Jump/::1686671353
+Jump.png::CompressedTexture2D::8205145988084944017::1686671350::1686671353::1::::<><>::
+::res://MARIO BROS/Sprites/Mario Bros/Run/::1686671106
+Run1.png::CompressedTexture2D::8244112742451471401::1686671081::1686671106::1::::<><>::
+Run2.png::CompressedTexture2D::1845669492444928597::1686671102::1686671106::1::::<><>::
+Run.png::CompressedTexture2D::6567073164752152340::1686671064::1686671106::1::::<><>::
+::res://MARIO BROS/Sprites/Menu/::1686800903
+Menu.png::CompressedTexture2D::5627509921148529392::1686793029::1686793031::1::::<><>::
+Moneda Simbolo.png::CompressedTexture2D::6052831679990443819::1686792894::1686792897::1::::<><>::
+SoloMundo1.png::CompressedTexture2D::6708044898593369650::1686789895::1686789896::1::::<><>::
+TransionAJuego.png::CompressedTexture2D::8559389028054837710::1686800640::1686800642::1::::<><>::
+::res://MARIO BROS/Sprites/Moneda/::1686854805
+Moneda.png::CompressedTexture2D::4255095494755437592::1686683098::1686683099::1::::<><>::
+MonedaInterrogante.png::CompressedTexture2D::8282135089878864191::1686854648::1686854805::1::::<><>::
+::res://MARIO BROS/Sprites/TileSheet/::1686788457
+NES - Super Mario Bros - Mario & Luigi2.png::CompressedTexture2D::7516586631950965072::1686620150::1686620151::1::::<><>::
+NES - Super Mario Bros - Mario & Luigi.png::CompressedTexture2D::3669749024763745929::1686597164::1686597164::1::::<><>::
+NES - Super Mario Bros - Title Screen HUD and Miscellaneous.png::CompressedTexture2D::5099984529516071844::1686787699::1686788457::1::::<><>::
+NES - Super Mario Bros - World 1-1.png::CompressedTexture2D::8198698528135343537::1686596545::1686596573::1::::<><>::
+R.png::CompressedTexture2D::3421074906111314893::1686617083::1686617094::1::::<><>::
+Sprites.png::CompressedTexture2D::4648825949054107652::1686617528::1686617528::1::::<><>::

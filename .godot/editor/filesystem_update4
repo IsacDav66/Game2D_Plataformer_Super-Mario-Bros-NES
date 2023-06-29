@@ -1,0 +1,16 @@
+res://juego.tscn
+res://Main.tscn
+res://win.tscn
+res://transicion_a_juego.tscn
+res://Interrogante.tscn
+res://Frog.tscn
+res://goomba.tscn
+res://gomba_v_2.tscn
+res://CaidaPresipicio.tscn
+res://player.tscn
+res://moneda_interrogante.tscn
+res://bg.tscn
+res://ShaderP.tscn
+res://Collectables/Cherry.tscn
+res://Moneda.tscn
+res://Bloque.tscn

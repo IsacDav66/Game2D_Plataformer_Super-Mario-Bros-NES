@@ -1,0 +1,102 @@
+[gd_scene load_steps=12 format=3 uid="uid://dunlxlyoc73fi"]
+
+[ext_resource type="Script" path="res://moneda_interrogante.gd" id="1_oh0td"]
+[ext_resource type="Texture2D" uid="uid://dp86s4pup2qo2" path="res://MARIO BROS/Sprites/Moneda/MonedaInterrogante.png" id="2_sokjr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r0blh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vcg34"]
+atlas = ExtResource("2_sokjr")
+region = Rect2(0, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0e1nk"]
+atlas = ExtResource("2_sokjr")
+region = Rect2(10, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_me3e6"]
+atlas = ExtResource("2_sokjr")
+region = Rect2(20, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30god"]
+atlas = ExtResource("2_sokjr")
+region = Rect2(30, 0, 8, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_trt62"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vcg34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0e1nk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_me3e6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30god")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_26sjq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_x3viq"]
+resource_name = "saltar"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.11, 0.24),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -47), Vector2(0, -39)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_15kwf"]
+_data = {
+"RESET": SubResource("Animation_26sjq"),
+"saltar": SubResource("Animation_x3viq")
+}
+
+[node name="MonedaInterrogante" type="Node2D"]
+script = ExtResource("1_oh0td")
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_r0blh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+position = Vector2(-1, 1)
+sprite_frames = SubResource("SpriteFrames_trt62")
+autoplay = "default"
+frame_progress = 0.743498
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "saltar"
+libraries = {
+"": SubResource("AnimationLibrary_15kwf")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

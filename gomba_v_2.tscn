@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://bwls3my8tqkuv"]
+
+[ext_resource type="Script" path="res://GombaV2.gd" id="1_7i1k6"]
+[ext_resource type="Texture2D" uid="uid://c1wp1tt1lg6o4" path="res://MARIO BROS/Sprites/Enemigos/Goomba/Goomba.png" id="2_gebrk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hyq2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_842up"]
+atlas = ExtResource("2_gebrk")
+region = Rect2(0, 0, 18, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqvo5"]
+atlas = ExtResource("2_gebrk")
+region = Rect2(18, 0, 18, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lyh4u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_842up")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqvo5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xh52w"]
+size = Vector2(2, 20)
+
+[node name="GombaV2" type="CharacterBody2D"]
+script = ExtResource("1_7i1k6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0hyq2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lyh4u")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(11, 0)
+
+[node name="Derecha" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_xh52w")
+
+[node name="Izquierda" type="CollisionShape2D" parent="."]
+position = Vector2(-11, 0)
+shape = SubResource("RectangleShape2D_xh52w")
+
+[connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]

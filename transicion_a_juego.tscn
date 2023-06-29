@@ -1,0 +1,97 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpfhx28qo36qd"]
+
+[ext_resource type="Script" path="res://TransicionAJuego.gd" id="1_8ubhn"]
+[ext_resource type="Texture2D" uid="uid://dt7h5fc2rq2ow" path="res://MARIO BROS/Sprites/Menu/TransionAJuego.png" id="2_63em0"]
+[ext_resource type="FontFile" uid="uid://ce2n1ceqch302" path="res://MARIO BROS/Fuente/Super Mario Bros. 2.ttf" id="3_shtdb"]
+
+[node name="TransicionAJuego" type="Node2D"]
+script = ExtResource("1_8ubhn")
+
+[node name="TransionAJuego" type="Sprite2D" parent="."]
+position = Vector2(228, 185)
+scale = Vector2(1.78125, 1.54167)
+texture = ExtResource("2_63em0")
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="."]
+texture_filter = 1
+offset_left = 44.0
+offset_top = 22.0
+offset_right = 144.0
+offset_bottom = 52.0
+scale = Vector2(1, 1.004)
+theme_override_fonts/normal_font = ExtResource("3_shtdb")
+theme_override_font_sizes/normal_font_size = 14
+text = "Mario"
+tab_size = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Timer" type="Timer" parent="Control"]
+one_shot = true
+autostart = true
+
+[node name="Node2D" type="Node2D" parent="Control/Timer"]
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+texture_filter = 1
+offset_left = 30.0
+offset_top = 36.0
+offset_right = 130.0
+offset_bottom = 66.0
+scale = Vector2(1, 1.004)
+theme_override_fonts/normal_font = ExtResource("3_shtdb")
+theme_override_font_sizes/normal_font_size = 14
+text = "0000000"
+tab_size = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+texture_filter = 1
+offset_left = 186.0
+offset_top = 35.0
+offset_right = 286.0
+offset_bottom = 65.0
+scale = Vector2(1, 1.004)
+theme_override_fonts/normal_font = ExtResource("3_shtdb")
+theme_override_font_sizes/normal_font_size = 14
+text = "00"
+tab_size = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="."]
+texture_filter = 1
+anchors_preset = -1
+anchor_left = -0.18
+anchor_top = -0.469455
+anchor_right = -0.18
+anchor_bottom = -0.469455
+offset_left = 243.0
+offset_top = 121.0
+offset_right = 343.0
+offset_bottom = 151.0
+scale = Vector2(1, 1.004)
+theme_override_fonts/normal_font = ExtResource("3_shtdb")
+theme_override_font_sizes/normal_font_size = 14
+text = "1 1"
+tab_size = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="."]
+texture_filter = 1
+offset_left = 271.0
+offset_top = 35.0
+offset_right = 371.0
+offset_bottom = 65.0
+scale = Vector2(1, 1.004)
+theme_override_fonts/normal_font = ExtResource("3_shtdb")
+theme_override_font_sizes/normal_font_size = 14
+text = "1 1"
+tab_size = 0
+metadata/_edit_use_anchors_ = true
+
+[connection signal="timeout" from="Control/Timer" to="." method="_on_timer_timeout"]

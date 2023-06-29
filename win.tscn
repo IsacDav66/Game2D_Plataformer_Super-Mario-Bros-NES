@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbedeycd5wtkm"]
+
+[ext_resource type="Script" path="res://win.gd" id="1_pgitx"]
+[ext_resource type="Texture2D" uid="uid://b1vg2idjma81a" path="res://MARIO BROS/Sprites/Moneda/Moneda.png" id="2_weo1k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b20ax"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e8k8r"]
+size = Vector2(36, 321.861)
+
+[node name="win" type="StaticBody2D"]
+script = ExtResource("1_pgitx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_b20ax")
+
+[node name="Meta" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Meta"]
+position = Vector2(3, -145.897)
+scale = Vector2(0.239274, -0.938935)
+shape = SubResource("RectangleShape2D_e8k8r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_weo1k")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Timer" type="Timer" parent="Control"]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="Node2D" type="Node2D" parent="Control/Timer"]
+
+[connection signal="body_entered" from="Meta" to="." method="_on_meta_body_entered"]
+[connection signal="ready" from="Control/Timer" to="." method="_on_timer_ready"]
+[connection signal="timeout" from="Control/Timer" to="." method="_on_timer_timeout"]
