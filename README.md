@@ -1,6 +1,9 @@
 
 # Resumen del Proyecto: Juego de Plataformas 2D Estilo Retro "Super Mario Bros."
 
+![image](https://github.com/user-attachments/assets/bfab73a9-461d-496e-bd16-977370fa1a18)
+
+
 Este proyecto es una implementación de un juego de plataformas 2D, inspirado en el clásico "Super Mario Bros." de la NES. El juego fue desarrollado utilizando el motor de videojuegos Godot. El objetivo principal del proyecto es recrear la mecánica de juego y la estética del juego original, adaptándolos a una versión moderna y personalizable.
 
 **Características Principales:**
